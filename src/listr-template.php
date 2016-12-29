@@ -4,30 +4,36 @@
 <?php echo $header?>
 </head>
 <body<?php echo $body_style.$direction?>>
+<?php echo $breadcrumbs?>
   <div class="<?php echo $container.$container_style ?>">
 <?php is_error($options) ?>
-<?php echo $breadcrumbs?>
 <?php echo $search ?>
-<?php echo $responsive_open?>
-      <table id="listr-table" class="table <?php echo $options['bootstrap']['table_style']?>">
-        <thead>
-          <tr>
-<?php echo $table_header?>
-          </tr>
-        </thead>
-        <tfoot>
-          <tr>
-            <td colspan="<?php echo $table_count?>">
-              <!-- <small class="float-xs-<?php echo $left?> text-muted" dir="ltr"><?php echo $summary ?></small> -->
-              <?php echo $kudos?>
-            </td>
-          </tr>
-        </tfoot>
-        <tbody>
-<?php echo $table_body?>
-        </tbody>
-      </table>
-<?php echo $responsive_close?>
+<div class="<?php echo $container.$container_style ?>">
+  <div class="row">
+    <div class="col-md-12">
+      <?php echo $responsive_open?>
+            <table id="listr-table" class="table <?php echo $options['bootstrap']['table_style']?>">
+              <thead>
+                <tr>
+      <?php echo $table_header?>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <td colspan="<?php echo $table_count?>">
+                    <!-- <small class="float-xs-<?php echo $left?> text-muted" dir="ltr"><?php echo $summary ?></small> -->
+                    <?php echo $kudos?>
+                  </td>
+                </tr>
+              </tfoot>
+              <tbody>
+      <?php echo $table_body?>
+              </tbody>
+            </table>
+      <?php echo $responsive_close?>
+    </div>
+  </div>
+</div>
 <?php if ($options['general']['enable_viewer']) { ?>
     <div class="modal fade" id="viewer-modal" tabindex="-1" role="dialog" aria-labelledby="file-name" aria-hidden="true">
       <div class="modal-dialog <?php echo $modal_size ?>">

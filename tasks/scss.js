@@ -25,7 +25,8 @@ gulp.task('make:scss', function(){
   gulp.src([
     'src/scss/basic.scss',
     'src/scss/modal.scss',
-    'src/scss/table.scss'
+    'src/scss/table.scss',
+    'src/scss/custom.scss'
     // 'src/scss/github-markdown.scss'
     ])
   .pipe(sass().on('error', sass.logError))
