@@ -390,6 +390,19 @@ $footer = set_footer();
 $breadcrumbs  = "    <div class=\"row\">" . PHP_EOL;
 $breadcrumbs .= "      <div class=\"col-xs-12\">" . PHP_EOL;
 $breadcrumbs .= "        <ol class=\"breadcrumb$breadcrumb_style\"".$direction.">" . PHP_EOL;
+$breadcrumbs .= '<span class="logo" style="
+    float: left;
+    padding: 0 34px 0 0;
+    position: relative;
+    margin: -6px 4px 10px -2px;
+"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 65 90" enable-background="new 0 0 65 90" xml:space="preserve" style="
+    width: 23px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+"><g><polygon fill="#333E48" points="49.373,10 36.255,17.578 36.255,21.516 49.373,13.939 61.889,21.168 61.889,35.651 47.858,44.372 47.858,71.688 25.878,84.381 3.896,71.688 3.896,46.309 25.874,33.624 34.253,38.482 34.253,34.538 25.882,29.68 0.484,44.337 0.484,73.662 25.878,88.318 51.272,73.662 51.272,46.272 65.302,37.549 65.302,19.197 "></polygon><path fill="#333E48" d="M27.469,56.824c5.39,1.313,8.195,3.242,8.195,7.505c0,4.806-3.749,7.647-9.106,7.647c-3.896,0-7.573-1.35-10.632-4.081l2.693-3.203c2.444,2.113,4.882,3.315,8.05,3.315c2.767,0,4.515-1.279,4.515-3.242c0-1.859-1.018-2.841-5.753-3.933c-5.428-1.312-8.486-2.915-8.486-7.649c0-4.447,3.643-7.431,8.703-7.431c3.716,0,6.666,1.132,9.253,3.207l-2.408,3.387c-2.292-1.713-4.586-2.624-6.916-2.624c-2.624,0-4.15,1.347-4.15,3.06C21.427,54.786,22.592,55.66,27.469,56.824"></path><polygon fill="#333E48" points="51.247,34.674 51.247,30.137 46.66,30.137 46.66,34.674 44.172,34.674 44.172,23.368 46.66,23.368 46.66,27.838 51.247,27.838 51.247,23.368 53.735,23.368 53.735,34.674 "></polygon></g></svg>
+</span>';
+$breadcrumbs .= "<li class=\"breadcrumb-item\">".$options['general']['company']."</li>";
 $breadcrumbs .= "          <li class=\"breadcrumb-item\"><a href=\"".htmlentities($root_dir, ENT_QUOTES, 'utf-8')."\">".$icons['home']."</a></li>" . PHP_EOL;
 foreach($dir_name as $dir => $name) :
     if(($name != ' ') && ($name != '') && ($name != '.') && ($name != '/')):
@@ -765,7 +778,7 @@ if(($folder_list) || ($file_list) ) {
 
 // Give kudos
 if ($options['general']['give_kudos']) {
-    $kudos = "<a class=\"float-xs-".$right." small text-muted\" href=\"https://github.com/idleberg/Bootstrap-Listr\" title=\"Bootstrap Listr on GitHub\" target=\"_blank\">"._('Fork me on GitHub')."</a>" . PHP_EOL;
+    $kudos = "<a class=\"float-xs-".$right." small text-muted\" href=\"http://sodiumhalogen.com\" title=\"Sodium Halogen file lister\" target=\"_blank\">by Sodium Halogen</a>" . PHP_EOL;
 }
 
 require_once('listr-template.php');

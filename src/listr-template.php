@@ -18,7 +18,7 @@
         <tfoot>
           <tr>
             <td colspan="<?php echo $table_count?>">
-              <small class="float-xs-<?php echo $left?> text-muted" dir="ltr"><?php echo $summary ?></small>
+              <!-- <small class="float-xs-<?php echo $left?> text-muted" dir="ltr"><?php echo $summary ?></small> -->
               <?php echo $kudos?>
             </td>
           </tr>
@@ -35,7 +35,7 @@
           <div class="modal-header">
             <button type="button" class="close float-xs-<?php echo $right?>" data-dismiss="modal" aria-hidden="true">&times;</button>
             <h4 class="modal-title text-<?php echo $left?>" id="file-name">&nbsp;</h4>
-            <small class="text-muted" id="file-meta"></small>
+            <!-- <small class="text-muted" id="file-meta"></small> -->
           </div>
           <div class="modal-body">
             <div class="text-xs-center">
